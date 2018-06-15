@@ -1,0 +1,5 @@
+Any migrations that should apply to the production environment should be placed in this folder.
+
+Please see documentation for details:
+
+https://flywaydb.org/documentation/migrations
