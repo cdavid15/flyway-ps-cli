@@ -1,0 +1,89 @@
+{
+    "app": {
+        "name": "Sample Application",
+        "global": {
+            "debugEnabled": "false",
+            "schemaHistoryTable": "flyway_schema_history",
+            "installedBy": "flyway migrations"
+        },
+        "environments": {
+            "environment": [
+                {
+                    "name": "dev",
+                    "description": "Development Database (H2)",
+                    "connection": {
+                        "url": "jdbc:h2:file:./sampledevdb",
+                        "user": "SA"
+                    },
+                    "locations": {
+                        "location": [
+                            "filesystem:./SQL/common",
+                            "filesystem:./SQL/dev"
+                        ]
+                    },
+                    "allowClean": "true"
+                },
+                {
+                    "name": "test",
+                    "description": "Test Database (H2)",
+                    "connection": {
+                        "url": "jdbc:h2:file:./sampledtestdb",
+                        "user": "SA"
+                    },
+                    "locations": {
+                        "location": [
+                            "filesystem:./SQL/common",
+                            "filesystem:./SQL/test"
+                        ]
+                    },
+                    "allowClean": "true"
+                },
+                {
+                    "name": "train",
+                    "description": "Train Database (H2)",
+                    "connection": {
+                        "url": "jdbc:h2:file:./sampletraindb",
+                        "user": "SA"
+                    },
+                    "locations": {
+                        "location": [
+                            "filesystem:./SQL/common",
+                            "filesystem:./SQL/train"
+                        ]
+                    },
+                    "allowClean": "true"
+                },
+                {
+                    "name": "stage",
+                    "description": "Stage Database (H2)",
+                    "connection": {
+                        "url": "jdbc:h2:file:./samplestagedb",
+                        "user": "SA"
+                    },
+                    "locations": {
+                        "location": [
+                            "filesystem:./SQL/common",
+                            "filesystem:./SQL/stage"
+                        ]
+                    },
+                    "allowClean": "false"
+                },
+                {
+                    "name": "production",
+                    "description": "Production Database (H2)",
+                    "connection": {
+                        "url": "jdbc:h2:file:./sampleproductiondb",
+                        "user": "SA"
+                    },
+                    "locations": {
+                        "location": [
+                            "filesystem:./SQL/common",
+                            "filesystem:./SQL/production"
+                        ]
+                    },
+                    "allowClean": "false"
+                }
+            ]
+        }
+    }
+}

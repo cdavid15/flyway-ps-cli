@@ -1,0 +1,81 @@
+<app>
+    <name>Sample Application</name>
+    <global>
+        <debugEnabled>false</debugEnabled>
+        <schemaHistoryTable>flyway_schema_history</schemaHistoryTable>
+        <installedBy>flyway migrations</installedBy>
+    </global>
+    <environments>
+        <environment>
+            <name>dev</name>
+            <description>Development Database (H2)</description>
+            <connection>
+                <url>jdbc:h2:file:./sampledevdb</url>
+                <user>SA</user>
+                <password></password>
+            </connection>
+            <locations>
+                <location>filesystem:./SQL/common</location>
+                <location>filesystem:./SQL/dev</location>
+            </locations>
+            <allowClean>true</allowClean>
+        </environment>
+        <environment>
+            <name>test</name>
+            <description>Test Database (H2)</description>
+            <connection>
+                <url>jdbc:h2:file:./sampledtestdb</url>
+                <user>SA</user>
+                <password></password>
+            </connection>
+            <locations>
+                <location>filesystem:./SQL/common</location>
+                <location>filesystem:./SQL/test</location>
+            </locations>
+            <allowClean>true</allowClean>
+        </environment>
+        <environment>
+            <name>train</name>
+            <description>Train Database (H2)</description>
+            <connection>
+                <url>jdbc:h2:file:./sampletraindb</url>
+                <user>SA</user>
+                <password></password>
+            </connection>
+            <locations>
+                <location>filesystem:./SQL/common</location>
+                <location>filesystem:./SQL/train</location>
+            </locations>
+            <allowClean>true</allowClean>
+        </environment>
+        <environment>
+            <name>stage</name>
+            <description>Stage Database (H2)</description>
+            <connection>
+                <url>jdbc:h2:file:./samplestagedb</url>
+                <user>SA</user>
+                <password></password>
+            </connection>
+            <locations>
+                <location>filesystem:./SQL/common</location>
+                <location>filesystem:./SQL/stage</location>
+            </locations>
+            <allowClean>false</allowClean>
+        </environment>
+
+        <environment>
+            <name>production</name>
+            <description>Production Database (H2)</description>
+            <connection>
+                <url>jdbc:h2:file:./sampleproductiondb</url>
+                <user>SA</user>
+                <password></password>
+            </connection>
+            <locations>
+                <location>filesystem:./SQL/common</location>
+                <location>filesystem:./SQL/production</location>
+            </locations>
+            <allowClean>false</allowClean>
+        </environment>
+    </environments>
+</app>
