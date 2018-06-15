@@ -25,7 +25,7 @@ application covering all of its applicable environments and guides the users usi
 ```powershell
     flyway configFile [-debug]
 ```
-Where configFile is the path to the specified JSON or XML application environment configuration file. See [Configuration File](#Configuration-File)
+Where configFile is the path to the specified JSON or XML application environment configuration file. See [Configuration File](#configuration-file)
 for details on the format of the file.
 
 Example:
